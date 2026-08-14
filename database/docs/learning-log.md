@@ -1,0 +1,42 @@
+# SupportDesk SQL API — Learning Log
+
+## Phase 1.1–1.5 — Environment
+
+- Learned the distinction between SQL, T-SQL, SQL Server and SSMS.
+- Set up Azure SQL Database because the laptop uses Windows ARM64.
+- Created `SupportDeskDB`.
+- Connected SSMS 22 to Azure SQL.
+- Used Microsoft Entra authentication.
+- Verified database context using `DB_NAME()`.
+- Learned the distinction between network access, authentication and authorization.
+
+## Phase 1.6A — Customers
+
+Created `dbo.Customers`.
+
+Concepts learned:
+
+- `CREATE TABLE`
+- `dbo` schema
+- `INT`
+- `IDENTITY(1,1)`
+- `PRIMARY KEY`
+- surrogate keys
+- `NVARCHAR`
+- `NULL`
+- `NOT NULL`
+- `UNIQUE`
+- `BIT`
+- `DEFAULT`
+- `DATETIME2`
+- `SYSUTCDATETIME()`
+- named constraints
+- DDL vs DML
+
+### Key design decisions
+
+`CustomerId` is a surrogate primary key rather than using email because email is business data and may change.
+
+Phone numbers are stored as text because they can contain country codes, plus signs, spaces and leading zeroes and aren't used for arithmetic.
+
+Email uniqueness is enforced at the database level using a `UNIQUE` constraint.
