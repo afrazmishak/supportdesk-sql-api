@@ -40,3 +40,27 @@ Concepts learned:
 Phone numbers are stored as text because they can contain country codes, plus signs, spaces and leading zeroes and aren't used for arithmetic.
 
 Email uniqueness is enforced at the database level using a `UNIQUE` constraint.
+
+## Phase 1.B — Departments
+
+Created dbo.Departments.
+
+Concepts learned:
+- CHECK constraints
+- Difference between NULL and blank text
+- LTRIM
+- RTRIM
+- LEN
+- Multi-row INSERT
+- UPDATE
+- WHERE
+- Importance of WHERE with UPDATE/DELETE
+- Database-enforced business rules
+- Separating schema and seed scripts
+
+Constraints:
+- PK_Departments
+- UQ_Departments_Name
+- CK_Departments_Name_NotBlank
+- DF_Departments_IsActive
+- DF_Departments_CreatedAt
