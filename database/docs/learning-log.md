@@ -41,7 +41,7 @@ Phone numbers are stored as text because they can contain country codes, plus si
 
 Email uniqueness is enforced at the database level using a `UNIQUE` constraint.
 
-## Phase 1.B — Departments
+## Phase 1.6B — Departments
 
 Created dbo.Departments.
 
@@ -64,3 +64,19 @@ Constraints:
 - CK_Departments_Name_NotBlank
 - DF_Departments_IsActive
 - DF_Departments_CreatedAt
+
+## Phase 1.6C — Agents + Our First FOREIGN KEY
+
+Concepts learned:
+- one-to-many relationships
+- foreign keys
+- referential integrity
+- parent vs child tables
+- orphan records
+- INNER JOIN
+- join conditions using ON
+- table aliases
+- basic LEFT JOIN
+- basic COUNT
+- basic GROUP BY
+- restrictive deletes vs cascade deletes
